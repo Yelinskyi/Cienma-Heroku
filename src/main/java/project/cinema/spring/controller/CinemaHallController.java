@@ -1,0 +1,43 @@
+package project.cinema.spring.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import project.cinema.spring.dto.request.CinemaHallRequestDto;
+import project.cinema.spring.dto.response.CinemaHallResponseDto;
+import project.cinema.spring.model.CinemaHall;
+import project.cinema.spring.service.CinemaHallService;
+import project.cinema.spring.service.mapper.CinemaHallMapper;
+
+import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
+
+@RestController
+@RequestMapping("/cinema-halls")
+public class CinemaHallController {
+    private final CinemaHallService cinemaHallService;
+    private final CinemaHallMapper cinemaHallMapper;
+
+    public CinemaHallController(CinemaHallService cinemaHallService,
+                                CinemaHallMapper cinemaHallMapper) {
+        this.cinemaHallService = cinemaHallService;
+        this.cinemaHallMapper = cinemaHallMapper;
+    }
+
+    @PostMapping
+    public CinemaHallResponseDto add(@RequestBody @Valid CinemaHallRequestDto requestDto) {
+        CinemaHall cinemaHall = cinemaHallService.add(cinemaHallMapper.mapToModel(requestDto));
+        return cinemaHallMapper.mapToDto(cinemaHall);
+    }
+
+    @GetMapping
+    public List<CinemaHallResponseDto> getAll() {
+        return cinemaHallService.getAll()
+                .stream()
+                .map(cinemaHallMapper::mapToDto)
+                .collect(Collectors.toList());
+    }
+}
