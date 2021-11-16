@@ -1,5 +1,8 @@
 package project.cinema.spring.security;
 
+import static org.springframework.security.core.userdetails.User.withUsername;
+
+import java.util.Optional;
 import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -7,10 +10,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import project.cinema.spring.model.User;
 import project.cinema.spring.service.UserService;
-
-import java.util.Optional;
-
-import static org.springframework.security.core.userdetails.User.withUsername;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

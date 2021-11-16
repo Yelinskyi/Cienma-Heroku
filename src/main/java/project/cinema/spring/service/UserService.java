@@ -1,8 +1,7 @@
 package project.cinema.spring.service;
 
-import project.cinema.spring.model.User;
-
 import java.util.Optional;
+import project.cinema.spring.model.User;
 
 public interface UserService {
     User add(User user);

@@ -1,5 +1,8 @@
 package project.cinema.spring.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,10 +13,6 @@ import project.cinema.spring.dto.response.MovieResponseDto;
 import project.cinema.spring.model.Movie;
 import project.cinema.spring.service.MovieService;
 import project.cinema.spring.service.mapper.MovieMapper;
-
-import javax.validation.Valid;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/movies")

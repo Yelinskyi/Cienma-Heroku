@@ -1,13 +1,12 @@
 package project.cinema.spring.service.impl;
 
+import java.time.LocalDate;
+import java.util.List;
 import org.springframework.stereotype.Service;
 import project.cinema.spring.dao.MovieSessionDao;
 import project.cinema.spring.exception.DataProcessingException;
 import project.cinema.spring.model.MovieSession;
 import project.cinema.spring.service.MovieSessionService;
-
-import java.time.LocalDate;
-import java.util.List;
 
 @Service
 public class MovieSessionServiceImpl implements MovieSessionService {

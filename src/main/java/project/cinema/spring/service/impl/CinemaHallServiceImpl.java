@@ -1,12 +1,11 @@
 package project.cinema.spring.service.impl;
 
+import java.util.List;
 import org.springframework.stereotype.Service;
 import project.cinema.spring.dao.CinemaHallDao;
 import project.cinema.spring.exception.DataProcessingException;
 import project.cinema.spring.model.CinemaHall;
 import project.cinema.spring.service.CinemaHallService;
-
-import java.util.List;
 
 @Service
 public class CinemaHallServiceImpl implements CinemaHallService {

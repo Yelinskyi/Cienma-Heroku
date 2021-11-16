@@ -1,14 +1,13 @@
 package project.cinema.spring.dao.impl;
 
+import java.util.Set;
+import javax.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 import project.cinema.spring.model.Role;
 import project.cinema.spring.model.RoleType;
 import project.cinema.spring.model.User;
 import project.cinema.spring.service.RoleService;
 import project.cinema.spring.service.UserService;
-
-import javax.annotation.PostConstruct;
-import java.util.Set;
 
 @Repository
 public class DataInitializer {

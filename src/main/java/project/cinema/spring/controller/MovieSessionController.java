@@ -1,5 +1,9 @@
 package project.cinema.spring.controller;
 
+import java.time.LocalDate;
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.validation.Valid;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +20,6 @@ import project.cinema.spring.model.MovieSession;
 import project.cinema.spring.service.MovieSessionService;
 import project.cinema.spring.service.mapper.MovieSessionMapper;
 import project.cinema.spring.util.DateTimePatternUtil;
-
-import javax.validation.Valid;
-import java.time.LocalDate;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/movie-sessions")

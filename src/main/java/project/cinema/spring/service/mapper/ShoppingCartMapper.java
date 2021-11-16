@@ -1,11 +1,10 @@
 package project.cinema.spring.service.mapper;
 
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;
 import project.cinema.spring.dto.response.ShoppingCartResponseDto;
 import project.cinema.spring.model.ShoppingCart;
 import project.cinema.spring.model.Ticket;
-
-import java.util.stream.Collectors;
 
 @Component
 public class ShoppingCartMapper implements

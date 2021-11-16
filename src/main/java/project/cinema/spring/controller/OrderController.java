@@ -1,5 +1,7 @@
 package project.cinema.spring.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +16,6 @@ import project.cinema.spring.service.OrderService;
 import project.cinema.spring.service.ShoppingCartService;
 import project.cinema.spring.service.UserService;
 import project.cinema.spring.service.mapper.OrderMapper;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/orders")

@@ -1,13 +1,12 @@
 package project.cinema.spring.service.impl;
 
+import java.util.Optional;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import project.cinema.spring.dao.UserDao;
 import project.cinema.spring.exception.DataProcessingException;
 import project.cinema.spring.model.User;
 import project.cinema.spring.service.UserService;
-
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {

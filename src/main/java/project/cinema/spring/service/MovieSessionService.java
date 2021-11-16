@@ -1,9 +1,8 @@
 package project.cinema.spring.service;
 
-import project.cinema.spring.model.MovieSession;
-
 import java.time.LocalDate;
 import java.util.List;
+import project.cinema.spring.model.MovieSession;
 
 public interface MovieSessionService {
     List<MovieSession> findAvailableSessions(Long movieId, LocalDate date);

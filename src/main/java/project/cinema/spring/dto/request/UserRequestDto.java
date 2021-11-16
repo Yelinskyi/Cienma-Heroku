@@ -1,10 +1,9 @@
 package project.cinema.spring.dto.request;
 
+import javax.validation.constraints.Size;
 import lombok.Data;
 import project.cinema.spring.lib.FieldsValueMatch;
 import project.cinema.spring.lib.ValidEmail;
-
-import javax.validation.constraints.Size;
 
 @FieldsValueMatch(
         field = "password",

@@ -1,9 +1,8 @@
 package project.cinema.spring.dao;
 
-import project.cinema.spring.model.CinemaHall;
-
 import java.util.List;
 import java.util.Optional;
+import project.cinema.spring.model.CinemaHall;
 
 public interface CinemaHallDao {
     CinemaHall add(CinemaHall cinemaHall);

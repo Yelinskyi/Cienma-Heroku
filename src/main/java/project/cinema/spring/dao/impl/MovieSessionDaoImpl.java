@@ -1,5 +1,7 @@
 package project.cinema.spring.dao.impl;
 
+import java.time.LocalDate;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -8,9 +10,6 @@ import project.cinema.spring.dao.AbstractDao;
 import project.cinema.spring.dao.MovieSessionDao;
 import project.cinema.spring.exception.DataProcessingException;
 import project.cinema.spring.model.MovieSession;
-
-import java.time.LocalDate;
-import java.util.List;
 
 @Repository
 public class MovieSessionDaoImpl extends AbstractDao<MovieSession> implements MovieSessionDao {

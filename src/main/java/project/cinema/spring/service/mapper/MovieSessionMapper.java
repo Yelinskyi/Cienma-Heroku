@@ -1,5 +1,7 @@
 package project.cinema.spring.service.mapper;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.springframework.stereotype.Component;
 import project.cinema.spring.dto.request.MovieSessionRequestDto;
 import project.cinema.spring.dto.response.MovieSessionResponseDto;
@@ -7,9 +9,6 @@ import project.cinema.spring.model.MovieSession;
 import project.cinema.spring.service.CinemaHallService;
 import project.cinema.spring.service.MovieService;
 import project.cinema.spring.util.DateTimePatternUtil;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @Component
 public class MovieSessionMapper implements RequestDtoMapper<MovieSessionRequestDto, MovieSession>,
